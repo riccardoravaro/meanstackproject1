@@ -25,7 +25,7 @@
       Register
     </div>
     <div class="panel-body">
-        <form name="register">
+        <form name="register" ng-submit="auth.register()">
           <div class="form-group">
            <label>Email address</label>
            <input type="email" class="form-control">
@@ -39,7 +39,7 @@
            <input type="password" class="form-control" name="pwdConfirm" compare-to="pwd" ng-model="pwdConfirm">
           </div>
           <span ng-show="register.pwdConfirm.$invalid && register.pwdConfirm.$dirty">Password do not match</span>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button  ng-disabled='register.pwdConfirm.$invalid' type="submit" class="btn btn-default">Submit</button>
         </form>
   </div>
   </div>
