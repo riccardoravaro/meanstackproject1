@@ -1,3 +1,4 @@
+#https://www.lynda.com/Express-js-tutorials/MEAN-Stack-MongoDB-Development-Techniques/440962-2.html
 
 # npm install -g yo
 
@@ -10,6 +11,6 @@
 
 
  osascript -e 'tell application "Terminal" to do script "cd /Users/riccardoravaro/Documents/web/MEAN/Project1/front-end;gulp serve"'
- osascript -e 'tell application "Terminal" to do script "cd /Users/riccardoravaro/Documents/web/MEAN/Project1/back-end;node server.js"'
+ osascript -e 'tell application "Terminal" to do script "cd /Users/riccardoravaro/Documents/web/MEAN/Project1/back-end;nodemon server.js"'
 
 
