@@ -7,14 +7,15 @@ module.exports = function checkAuthenticated( req, res, next ) {
 		return res.status( "401" ).send( { message:"Please make sure your request has an Authorization header" } );
 	}
 
-	 var token = req.header( "Authorization" ).split( " " )[ 1 ];
+	 var token = req.header( "Authorization" ).split( ' ')[1];
 	 var payload  = jwt.decode( token, "secret" );
 
 		if ( payload.exp <= moment().unix() ) {
 		return res.status( 401 ).send( { message:"Token has expired" } );
 	}
+	console.log(payload);
 
-	req.user = payload.sub;
+	req.user = payload.user;
 
 	next();
 }

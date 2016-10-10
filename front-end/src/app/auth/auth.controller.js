@@ -11,4 +11,12 @@ export class AuthController {
    	 });
 
    }
+
+   login() {
+   	 var vm = this;
+   	 this.$auth.login(this.login.user).then(function(token){
+   	 		vm.$auth.setToken(token);
+   	 });
+
+   }
 }
